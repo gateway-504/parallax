@@ -83,9 +83,9 @@ For Linux+GPU devices, Parallax provides a docker environment for quick setup. C
 Run a docker container as below. Please note that generally the argument ```--gpus all``` is necessary for the docker to run on GPUs.
 ```sh
 # For Blackwell/Ampere/Hopper
-docker run -it --gpus all --network host gradientservice/parallax:latest bash
+docker run -it --gpus all -p 3001:3001 gradientservice/parallax:latest bash
 # For DGX Spark
-docker run -it --gpus all --network host gradientservice/parallax:latest-spark bash
+docker run -it --gpus all  --network host gradientservice/parallax:latest-spark bash
 ```
 The container starts under parallax workspace and you should be able to run parallax directly.
 
